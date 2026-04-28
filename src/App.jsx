@@ -5,18 +5,18 @@ function App() {
     <main className="page">
       <header className="hero">
         <div className="hero-content">
-          <p className="tag">Midia Kit + Repositorio Oficial</p>
-          <h1>Ooutro Pedro: criador de conteudo, projetos e parcerias de marca.</h1>
+          <p className="tag">Expedicao Ooutro Pedro</p>
+          <h1>Aventura, historias e conteudo que puxa a galera pra bordo.</h1>
           <p className="description">
-            Este e o primeiro layout da sua pagina oficial para apresentar seu
-            trabalho ao publico e a marcas interessadas em colaboracoes.
+            Aqui e onde publico, comunidade e marcas encontram minha rota:
+            conteudo divertido, energia alta e projetos com cara de jornada.
           </p>
           <div className="actions">
             <a href="#midia-kit" className="button primary">
-              Ver midia kit
+              Abrir mapa de parcerias
             </a>
             <a href="#contato" className="button ghost">
-              Falar sobre parceria
+              Chamar pra aventura
             </a>
           </div>
         </div>
@@ -31,8 +31,8 @@ function App() {
       <section id="sobre" className="card">
         <h2>Quem e Ooutro Pedro</h2>
         <p>
-          Criador focado em conteudo digital com linguagem proxima da comunidade,
-          curadoria autoral e narrativa leve para engajar audiencia.
+          Criador de conteudo com vibe exploradora: humor, curiosidades e
+          historias que fazem a audiencia sentir que esta vivendo a jornada junto.
         </p>
       </section>
 
@@ -60,20 +60,20 @@ function App() {
       </section>
 
       <section id="projetos" className="card">
-        <h2>Repositorio de conteudos</h2>
+        <h2>Diario de bordo</h2>
         <ul className="project-list">
-          <li>Videos em destaque e playlists autorais.</li>
-          <li>Campanhas e publis anteriores para prova social.</li>
-          <li>Projetos especiais com formatos multiplataforma.</li>
+          <li>Videos e playlists com narrativa de aventura.</li>
+          <li>Quadros criativos para conectar publico e tendencia.</li>
+          <li>Projetos especiais com formato multiplataforma.</li>
         </ul>
       </section>
 
       <section id="midia-kit" className="card">
-        <h2>Midia kit para marcas</h2>
+        <h2>Mapa de parceria para marcas</h2>
         <ul className="project-list">
-          <li>Posicionamento: conteudo de curadoria, lifestyle e entretenimento.</li>
-          <li>Publico: comunidade digital ativa e em crescimento.</li>
-          <li>Formatos: video curto, integracao em roteiro e sequencia de stories.</li>
+          <li>Posicionamento: conteudo aventureiro, leve e compartilhavel.</li>
+          <li>Publico: comunidade ativa, curiosa e participativa.</li>
+          <li>Formatos: video curto, roteiro integrado e sequencia de stories.</li>
           <li>Entregaveis: briefing, criacao, publicacao e relatorio final.</li>
         </ul>
       </section>

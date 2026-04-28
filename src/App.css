@@ -8,15 +8,27 @@
 }
 
 .hero {
-  background: linear-gradient(145deg, #0b1b2b 0%, #132c45 55%, #19324d 100%);
-  color: #f8f3e8;
+  background: linear-gradient(140deg, #0c2d48 0%, #145da0 52%, #2e8bc0 100%);
+  color: #fdf7e7;
   padding: 44px;
   border-radius: 20px;
-  box-shadow: 0 14px 40px rgba(2, 6, 23, 0.35);
+  box-shadow: 0 16px 44px rgba(8, 24, 40, 0.45);
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: auto -80px -100px auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255, 212, 102, 0.45), transparent 70%);
+  pointer-events: none;
 }
 
 .hero-content {
@@ -32,8 +44,9 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 14px;
-  border: 3px solid #d1ad63;
+  border: 3px solid #ffd166;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transform: rotate(-1.5deg);
 }
 
 .tag {
@@ -43,12 +56,12 @@
   letter-spacing: 0.08em;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(209, 173, 99, 0.2);
-  color: #f8deb0;
+  background: rgba(255, 209, 102, 0.2);
+  color: #ffe6a6;
 }
 
 .description {
-  color: #d9d2c4;
+  color: #e8f3ff;
   max-width: 68ch;
 }
 
@@ -62,33 +75,33 @@
 .button {
   text-decoration: none;
   font-weight: 600;
-  padding: 10px 16px;
+  padding: 11px 17px;
   border-radius: 10px;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .button.primary {
-  background: #d1ad63;
-  color: #2f230d;
+  background: #ffd166;
+  color: #3a2a00;
 }
 
 .button.ghost {
-  background: rgba(255, 255, 255, 0.06);
-  color: #f8f3e8;
-  border: 1px solid rgba(209, 173, 99, 0.4);
+  background: rgba(255, 255, 255, 0.14);
+  color: #f8f8f8;
+  border: 1px solid rgba(255, 255, 255, 0.38);
 }
 
 .card {
-  background: #f8f3e8;
-  border: 1px solid #d6c4a0;
+  background: #fff8e8;
+  border: 1px solid #f1d49a;
   border-radius: 16px;
   padding: 24px 28px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(34, 30, 20, 0.08);
+  box-shadow: 0 10px 26px rgba(34, 30, 20, 0.12);
 }
 
 .metrics {
@@ -98,18 +111,18 @@
 }
 
 .metric-card {
-  background: #1b2c3f;
-  color: #f6eee0;
+  background: linear-gradient(150deg, #124e78 0%, #0b3a5b 100%);
+  color: #fff6e0;
   border-radius: 14px;
   padding: 16px;
-  border: 1px solid #32506f;
+  border: 1px solid #1e6797;
 }
 
 .metric-label {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #ccb589;
+  color: #ffe1a1;
 }
 
 .metric-value {
@@ -119,7 +132,7 @@
 }
 
 .metric-note {
-  color: #e3d7c0;
+  color: #fef3d7;
   font-size: 0.9rem;
 }
 
@@ -139,7 +152,7 @@
 }
 
 .links a {
-  color: #193f76;
+  color: #0f4c81;
   text-decoration: none;
   font-weight: 600;
 }
