@@ -37,27 +37,32 @@ function App() {
         </p>
       </section>
 
-      <section className="metrics">
-        <article className="metric-card">
-          <p className="metric-label">YouTube</p>
-          <strong className="metric-value">Atualizar</strong>
-          <span className="metric-note">Inscritos</span>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Instagram</p>
-          <strong className="metric-value">Atualizar</strong>
-          <span className="metric-note">Seguidores</span>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">TikTok</p>
-          <strong className="metric-value">Atualizar</strong>
-          <span className="metric-note">Seguidores</span>
-        </article>
-        <article className="metric-card">
-          <p className="metric-label">Media mensal</p>
-          <strong className="metric-value">Atualizar</strong>
-          <span className="metric-note">Visualizacoes</span>
-        </article>
+      <section className="card">
+        <div className="metrics-head">
+          <h2>Metricas do ultimo mes</h2>
+          <p>Periodo analisado: Marco de 2026 (1 a 31 de marco)</p>
+        </div>
+        <div className="metrics">
+          <article className="metric-card">
+            <p className="metric-label">YouTube - visualizacoes</p>
+            <strong className="metric-value">3,5 mil</strong>
+            <span className="metric-note">Tempo de exibicao: 9,3 horas | Inscritos: +6</span>
+          </article>
+          <article className="metric-card">
+            <p className="metric-label">Instagram - visualizacoes</p>
+            <strong className="metric-value">7.523</strong>
+            <span className="metric-note">
+              Contas alcancadas: 2.723 | Nao seguidores: 72,4%
+            </span>
+          </article>
+          <article className="metric-card">
+            <p className="metric-label">TikTok - visualizacoes de publicacao</p>
+            <strong className="metric-value">8.426</strong>
+            <span className="metric-note">
+              Curtidas: 285 | Comentarios: 42 | Compartilhamentos: 9
+            </span>
+          </article>
+        </div>
       </section>
 
       <section id="projetos" className="card">
@@ -114,6 +119,22 @@ function App() {
         </div>
       </section>
 
+      <section id="curadoria" className="card">
+        <h2>Curadoria do Mestre</h2>
+        <p className="video-text">
+          Espaco dedicado as recomendacoes que compartilho com a audiencia. Em
+          breve vou adicionar novos links aqui.
+        </p>
+        <a
+          className="button primary curadoria-cta"
+          href="https://youtube.com/playlist?list=PLifk6ODQW1xIbuOM28fLEf9BOGrPjS93D&si=QGSNAM33ZACw-CqC"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Abrir playlist recomendada
+        </a>
+      </section>
+
       <section className="card">
         <h2>Objetivo final: comunidade de conversa</h2>
         <p>
@@ -133,6 +154,20 @@ function App() {
           contato@ooutropedro.com
         </a>
         <div className="links">
+          <a
+            href="https://www.instagram.com/ooutropedro_?igsh=aTY0cGlzejVpNjNt&utm_source=qr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram oficial
+          </a>
+          <a
+            href="https://www.tiktok.com/@ooutropedro?_r=1&_t=ZS-95v566OnsbE"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TikTok oficial
+          </a>
           <a href="https://linktr.ee/ooutropedro" target="_blank" rel="noreferrer">
             Linktree oficial
           </a>
