@@ -1,10 +1,9 @@
 body {
   margin: 0;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background:
-    linear-gradient(rgba(4, 20, 36, 0.48), rgba(4, 20, 36, 0.48)),
-    url('/bg-estetica.png') center / cover fixed no-repeat;
-  color: #1f2b34;
+  background: #f4f4f5;
+  color: #18181b;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
