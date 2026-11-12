@@ -74,6 +74,14 @@
   font-weight: 700;
 }
 
+.purpose {
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 34ch;
+  margin-bottom: 10px;
+}
+
 .description {
   color: var(--muted);
   max-width: 58ch;
@@ -120,6 +128,16 @@
   border-color: var(--accent);
 }
 
+.button.outline {
+  background: transparent;
+  color: #f4f4f5;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+}
+
+.button.outline:hover {
+  border-color: #fff;
+}
+
 .button.big {
   font-size: 1.08rem;
   padding: 16px 30px;
@@ -139,6 +157,74 @@
   color: var(--muted);
   margin-bottom: 20px;
   max-width: 64ch;
+}
+
+.pilar {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* ------------------------- COMO NASCE (PASSOS) ----------------------- */
+.steps,
+.diario-steps,
+.brand-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.step,
+.brand-item {
+  background: var(--gray-1);
+  border: 1px solid var(--gray-1-line);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.step strong,
+.brand-item strong,
+.diario-step strong {
+  display: block;
+  font-size: 1.02rem;
+  margin-bottom: 4px;
+}
+
+.step p,
+.brand-item p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.brand-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card .actions {
+  margin-top: 22px;
 }
 
 /* ----------------------------- FORMATOS ------------------------------ */
@@ -192,35 +278,33 @@
   border-color: var(--gray-2-line);
 }
 
-.chip-emoji {
-  font-size: 1.15rem;
+.format-chip.is-dark {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 /* ----------------------------- PORTFOLIO ----------------------------- */
 .portfolio {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.portfolio-head {
-  margin-bottom: 20px;
-}
-
-.portfolio-head h2 {
+.portfolio-block {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  scroll-margin-top: 16px;
 }
 
-.portfolio-emoji {
-  font-size: 1.45rem;
+.portfolio-head {
+  flex: 1;
 }
 
 .content-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
 }
 
 .content-card {
@@ -242,16 +326,11 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.content-card.is-empty {
-  cursor: default;
-  opacity: 0.9;
-}
-
 .thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
   overflow: hidden;
   background: linear-gradient(150deg, var(--gray-2) 0%, var(--gray-3) 100%);
   border: 1px solid var(--line);
@@ -264,11 +343,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.thumb-placeholder {
-  font-size: 2.6rem;
-  opacity: 0.7;
 }
 
 .thumb-play {
@@ -289,14 +363,83 @@
   transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
-.content-card.is-empty .thumb-play {
-  display: none;
-}
-
 .content-title {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
   color: var(--ink);
+}
+
+/* -------------------------- DIARIO DE BORDO -------------------------- */
+.diario {
+  background: linear-gradient(140deg, #1f1f23 0%, #18181b 100%);
+  color: #f4f4f5;
+  border-radius: 24px;
+  border: 1px solid #2a2a2e;
+  padding: 44px 48px;
+  text-align: left;
+  scroll-margin-top: 16px;
+}
+
+.diario .tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.diario h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  margin: 14px 0 10px;
+}
+
+.diario-lead {
+  color: #c9c9ce;
+  max-width: 60ch;
+  font-size: 1.04rem;
+}
+
+.diario-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 28px 0;
+}
+
+.diario-step {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.diario-step .step-num {
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.diario-step p {
+  color: #b8b8bd;
+  font-size: 0.92rem;
+}
+
+.diario-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.diario-foot p {
+  color: #c9c9ce;
+  max-width: 44ch;
+}
+
+.diario .button.primary {
+  background: #f4f4f5;
+  color: #18181b;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.diario .button.primary:hover {
+  background: #fff;
 }
 
 /* --------------------------- VIDEO / METRICAS ------------------------ */
@@ -419,7 +562,11 @@
   max-width: 52ch;
 }
 
-.cta-content .button {
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin: 8px 0 4px;
 }
 
@@ -441,6 +588,20 @@
 
 .links a:hover {
   opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.86rem;
+  padding-top: 6px;
+}
+
+#sobre,
+#quadros,
+#parcerias,
+#contato {
+  scroll-margin-top: 16px;
 }
 
 /* ----------------------------- RESPONSIVO ---------------------------- */
@@ -472,16 +633,21 @@
     width: min(300px, 66vw);
   }
 
+  .purpose,
   .description {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .actions {
+  .hero .actions {
     justify-content: center;
   }
 
-  .metrics {
+  .diario {
+    padding: 36px 32px;
+  }
+
+  .diario-steps {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -538,12 +704,44 @@
     justify-content: center;
   }
 
-  .content-grid {
+  .portfolio,
+  .steps,
+  .brand-list,
+  .metrics {
     grid-template-columns: 1fr;
   }
 
-  .metrics {
-    grid-template-columns: 1fr;
+  .content-grid {
+    gap: 12px;
+  }
+
+  .purpose {
+    font-size: 1.1rem;
+  }
+
+  .diario {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .diario-steps {
+    gap: 10px;
+    margin: 22px 0;
+  }
+
+  .diario-step {
+    padding: 14px;
+  }
+
+  .diario-foot .button,
+  .cta-buttons .button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    width: 100%;
   }
 
   .links {
@@ -562,8 +760,13 @@
   }
 
   .hero,
-  .cta-final {
+  .cta-final,
+  .diario {
     padding: 24px 18px;
+  }
+
+  .diario-steps {
+    grid-template-columns: 1fr;
   }
 
   .card {
